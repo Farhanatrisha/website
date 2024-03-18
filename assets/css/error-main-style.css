@@ -1,0 +1,113 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'CustomFontEnglish';
+    src: url('../fonts/inter-regular.ttf') format('truetype');
+}
+html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-kerning: normal;
+    font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    border: 0;
+    background-color: #F2F2F2 !important;
+    font-family: 'CustomFontEnglish', sans-serif, arial;
+    color: #333333;
+    font-size: 16px;
+}
+/*********************************************************************/
+.header-container-wrapper {
+    background-color: #F2F2F2;
+    padding: 5px 10px;
+    border-bottom: 1px solid #dad9dc;
+}
+.header-container-div {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-site-logo {
+    padding: 10px 10px 5px 10px;
+}
+/*****************************************************************/
+.error-page-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px;
+}
+.error-page-div img {
+    max-width: 400px;
+    width: 100%;
+}
+.error-page-btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*********************************************************************/
+.main-container-wrapper {
+    padding: 0 10px;
+}
+.main-container-div {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+/*********************************************************************/
+.go-back-btn {
+    text-decoration: none;
+    background-color: #7A5AF8;
+    border: 1px solid #7A5AF8;
+    padding: 7px 15px;
+    color: #ffffff;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.go-back-btn:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.go-home-btn {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #7A5AF8;
+    padding: 7px 15px;
+    color: #7A5AF8;
+    border-radius: 4px;
+    margin-left: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.go-home-btn:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+
+
+
+
+/****************************************************************/
+@media print {
+    body {
+        display: none;
+    }
+}

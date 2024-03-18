@@ -1,0 +1,23 @@
+#Handling error pages ---
+ErrorDocument 400 "<p style='display:flex;justify-content:center;align-items:center;height:80vh;margin:0;font-family:arial;font-size:24px;color:#294d61;'>404 | Not Found.</p>"
+ErrorDocument 401 "<p style='display:flex;justify-content:center;align-items:center;height:80vh;margin:0;font-family:arial;font-size:24px;color:#294d61;'>404 | Not Found.</p>"
+ErrorDocument 403 "<p style='display:flex;justify-content:center;align-items:center;height:80vh;margin:0;font-family:arial;font-size:24px;color:#294d61;'>404 | Not Found.</p>"
+ErrorDocument 404 "<p style='display:flex;justify-content:center;align-items:center;height:80vh;margin:0;font-family:arial;font-size:24px;color:#294d61;'>404 | Not Found.</p>"
+ErrorDocument 500 "<p style='display:flex;justify-content:center;align-items:center;height:80vh;margin:0;font-family:arial;font-size:24px;color:#294d61;'>404 | Not Found.</p>"
+
+RewriteEngine on
+
+#SSL certificate ---
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#Disable Directory Browsing ---
+Options All -Indexes
+
+#Configure Index Page ---
+DirectoryIndex index.php
+
+#Pass all requests through index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
